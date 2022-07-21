@@ -19,5 +19,27 @@ public class Main {
 
         //third part of task
 
+        Printable printable = new Printable() {
+            @Override
+            public void print(String login, String password) {
+                System.out.println("User with login \"" + userInner.getLogin() + "\" and password \"" +
+                        userInner.getPassword() + "\" sent a request");
+            }
+        };
+
+        printable.print(userLocal.getLogin(), userLocal.getPassword());
+
+        //through lambda
+
+        Printable printableLambda = (login, password) -> System.out.println(
+                "User with login \"" + userInner.getLogin() + "\" and password \"" +
+                userInner.getPassword() + "\" sent a request");
+
+        printableLambda.print(userLocal.getLogin(), userLocal.getPassword());
+
+        //fourth part of task
+
+        UserInner.QueryStatic queryStatic = new UserInner.QueryStatic();
+        queryStatic.printToLog(userLocal.getLogin(), userLocal.getPassword());
     }
 }

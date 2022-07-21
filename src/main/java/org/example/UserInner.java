@@ -22,4 +22,10 @@ public class UserInner {
             System.out.println("User with login \"" + login + "\" and password \"" + password + "\" sent a request");
         }
     }
+
+    public static class QueryStatic {
+        public void printToLog(String login, String password) {
+            System.out.println("User with login \"" + login + "\" and password \"" + password + "\" sent a request");
+        }
+    }
 }

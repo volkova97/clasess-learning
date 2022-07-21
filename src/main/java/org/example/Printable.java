@@ -1,5 +1,5 @@
 package org.example;
 
 public interface Printable {
-    void print();
+    void print(String login, String password);
 }
